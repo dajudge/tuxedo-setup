@@ -43,7 +43,7 @@ fi
 # Needful things
 if [[ $CMD = "all" ]] || [[ $CMD = "base" ]]; then
 	apt-get update && apt-get upgrade -y
-	apt-get install -y laptop-mode-tools mc git gparted chrome-gnome-shell gnome-tweaks dconf-editor curl steam-installer vlc
+	apt-get install -y laptop-mode-tools mc git gparted chrome-gnome-shell gnome-tweaks dconf-editor curl steam-installer vlc sl
 fi
 
 # Chrome
