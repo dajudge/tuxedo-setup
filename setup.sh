@@ -29,6 +29,7 @@ if [[ $CMD = "all" ]] || [[ $CMD = "gsettings" ]]; then
 	run-in-user-session gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
 	run-in-user-session gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab']"
 	run-in-user-session gsettings set org.gnome.shell favorite-apps "['google-chrome.desktop', 'org.gnome.Terminal.desktop', 'intellij-idea-ultimate.desktop', 'steam.desktop', 'enpass.desktop']"
+	run-in-user-session gsettings set org.gnome.desktop.interface clock-show-date true
 fi
 
 # Needful things
