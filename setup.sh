@@ -33,6 +33,13 @@ if [[ $CMD = "all" ]] || [[ $CMD = "gsettings" ]]; then
 	run-in-user-session gsettings set org.gnome.desktop.interface show-battery-percentage true
 fi
 
+
+# Don't suspend on lid close
+if [[ $CMD = "all" ]] || [[ $CMD = "lid" ]]; then
+	sed -i '/^HandleLidSwitch=/d' /etc/systemd/logind.conf
+	echo HandleLidSwitch=ignore >> /etc/systemd/logind.conf
+fi
+
 # Needful things
 if [[ $CMD = "all" ]] || [[ $CMD = "base" ]]; then
 	apt-get update && apt-get upgrade -y
